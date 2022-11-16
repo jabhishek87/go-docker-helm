@@ -1,0 +1,63 @@
+info:
+  contact: {}
+paths:
+  /admin:
+    post:
+      consumes:
+      - application/json
+      description: do post
+      parameters:
+      - description: '{status:val, name:val}'
+        in: body
+        name: data
+        required: true
+        schema:
+          type: string
+      - description: ' Basic Zm9vOmJhcg=='
+        in: header
+        name: authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: post params example
+      tags:
+      - postParams
+  /api/v1/ping:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"message":"pong"}'
+          schema:
+            type: string
+      summary: ping example
+      tags:
+      - example
+  /api/v1/user/{name}:
+    get:
+      consumes:
+      - application/json
+      description: do get
+      parameters:
+      - description: name
+        in: path
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: get params example
+      tags:
+      - getParams
+swagger: "2.0"
