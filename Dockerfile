@@ -3,8 +3,7 @@ ENV GO111MODULE=on
 WORKDIR /app
 COPY src /app/
 
-# RUN CGO=0 GOOS=linux GOARCH=amd64 go build -o bin/gin_api
-RUN go build -o bin/gin_api
+RUN CGO=0 GOOS=linux GOARCH=amd64 go build -o bin/gin_api
 
 # Stage 2: build the image
 FROM alpine
