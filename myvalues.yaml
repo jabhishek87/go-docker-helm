@@ -1,0 +1,6 @@
+AppSettings:
+  GIN_MODE: "release"
+  PORT: "8080"
+
+image:
+  tag: latest
